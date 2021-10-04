@@ -10,6 +10,18 @@ import java.util.Objects;
 })
 @Entity
 public class AccountTransaction {
+
+    public AccountTransaction() {
+    }
+
+    public AccountTransaction(Integer id, AccountType accountType, Member member, Integer amount, LocalDate transactionDate) {
+        this.id = id;
+        this.accountType = accountType;
+        this.member = member;
+        this.amount = amount;
+        this.transactionDate = transactionDate;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "account_transaction_id", nullable = false)

@@ -7,6 +7,16 @@ import java.util.Objects;
 @Table(name = "account_types")
 @Entity
 public class AccountType {
+
+    public AccountType() {
+    }
+
+    public AccountType(Integer id, String accountType, LocalDate creationDate) {
+        this.id = id;
+        this.accountType = accountType;
+        this.creationDate = creationDate;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "account_type_id", nullable = false)
