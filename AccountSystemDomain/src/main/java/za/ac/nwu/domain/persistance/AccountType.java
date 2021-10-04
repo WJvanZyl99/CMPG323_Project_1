@@ -2,6 +2,7 @@ package za.ac.nwu.domain.persistance;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.Objects;
 
 @Table(name = "account_types")
 @Entity
@@ -39,5 +40,27 @@ public class AccountType {
 
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        AccountType that = (AccountType) o;
+        return Objects.equals(id, that.id) && Objects.equals(accountType, that.accountType) && Objects.equals(creationDate, that.creationDate);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, accountType, creationDate);
+    }
+
+    @Override
+    public String toString() {
+        return "AccountType{" +
+                "id=" + id +
+                ", accountType='" + accountType + '\'' +
+                ", creationDate=" + creationDate +
+                '}';
     }
 }
