@@ -5,8 +5,8 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 @ComponentScan(basePackages = {
-        "za.ac.nwu.web.sb.controller",
-        "za.ac.nwu.web.sb.exception"
+        "za.ac.nwu.web.controller",
+        "za.ac.nwu.web.exception"
 })
 public class WebConfig {
 

@@ -13,11 +13,6 @@
     <artifactId>AccountSystemTranslator</artifactId>
     <packaging>jar</packaging>
 
-    <properties>
-        <maven.compiler.source>16</maven.compiler.source>
-        <maven.compiler.target>16</maven.compiler.target>
-    </properties>
-
     <dependencies>
         <dependency>
             <groupId>za.ac.nwu</groupId>
