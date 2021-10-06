@@ -9,12 +9,8 @@ import java.util.List;
 
 public class MemberTranslatorImpl implements MemberTranslator {
 
-    private final MemberRepository memberRepository;
-
     @Autowired
-    public MemberTranslatorImpl(MemberRepository memberRepository) {
-        this.memberRepository = memberRepository;
-    }
+    private MemberRepository memberRepository;
 
     @Override
     public List<Member> getAllMembers() {

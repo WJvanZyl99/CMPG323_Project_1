@@ -11,18 +11,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import za.ac.nwu.domain.persistence.AccountType;
 import za.ac.nwu.domain.service.GeneralResponse;
-import za.ac.nwu.logic.flow.FetchAccountTypeFlow;
+import za.ac.nwu.logic.flow.FetchAccountTypes;
 import java.util.List;
 
 @RestController
 @RequestMapping("AccountType")
 public class AccountTypeController {
 
-    private final FetchAccountTypeFlow fetchAccountTypeFlow;
+    private final FetchAccountTypes fetchAccountTypes;
 
     @Autowired
-    public AccountTypeController(FetchAccountTypeFlow fetchAccountTypeFlow) {
-        this.fetchAccountTypeFlow = fetchAccountTypeFlow;
+    public AccountTypeController(FetchAccountTypes fetchAccountTypes) {
+        this.fetchAccountTypes = fetchAccountTypes;
     }
 
     @GetMapping("/all")
@@ -34,7 +34,7 @@ public class AccountTypeController {
             @ApiResponse(code = 500, message = "Internal Server Error", response = GeneralResponse.class)
     })
     public ResponseEntity<GeneralResponse<List<AccountType>>> getAll() {
-        List<AccountType> accountTypes = fetchAccountTypeFlow.getAllAccountTypes();
+        List<AccountType> accountTypes = fetchAccountTypes.getAllAccountTypes();
         GeneralResponse<List<AccountType>> response = new GeneralResponse<>(true, accountTypes);
         return new ResponseEntity<>(response, HttpStatus.OK);
     }

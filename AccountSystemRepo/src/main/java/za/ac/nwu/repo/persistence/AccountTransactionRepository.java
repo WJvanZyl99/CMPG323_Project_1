@@ -5,4 +5,5 @@ import za.ac.nwu.domain.persistence.AccountTransaction;
 
 public interface AccountTransactionRepository extends JpaRepository<AccountTransaction, Integer> {
 
+
 }

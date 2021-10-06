@@ -11,12 +11,8 @@ import java.util.List;
 @Component
 public class AccountTypeTranslatorImpl implements AccountTypeTranslator {
 
-    private final AccountTypeRepository accountTypeRepository;
-
     @Autowired
-    public AccountTypeTranslatorImpl(AccountTypeRepository accountTypeRepository) {
-        this.accountTypeRepository = accountTypeRepository;
-    }
+    private AccountTypeRepository accountTypeRepository;
 
     @Override
     public List<AccountType> getAllAccountTypes() {
