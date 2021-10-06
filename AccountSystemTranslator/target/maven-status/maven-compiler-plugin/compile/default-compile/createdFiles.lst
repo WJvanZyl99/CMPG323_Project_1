@@ -1,3 +1,7 @@
+za\ac\nwu\translator\impl\MemberTranslatorImpl.class
 za\ac\nwu\translator\AccountTypeTranslator.class
-za\ac\nwu\translator\config\TranslatorConfig.class
 za\ac\nwu\translator\impl\AccountTypeTranslatorImpl.class
+za\ac\nwu\translator\MemberTranslator.class
+za\ac\nwu\translator\AccountTransactionTranslator.class
+za\ac\nwu\translator\impl\AccountTransactionTranslatorImpl.class
+za\ac\nwu\translator\config\TranslatorConfig.class
