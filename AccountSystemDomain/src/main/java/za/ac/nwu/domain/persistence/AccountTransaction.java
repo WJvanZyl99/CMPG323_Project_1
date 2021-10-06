@@ -1,4 +1,4 @@
-package za.ac.nwu.domain.persistance;
+package za.ac.nwu.domain.persistence;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -27,11 +27,11 @@ public class AccountTransaction {
     @Column(name = "account_transaction_id", nullable = false)
     private Integer id;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "account_type")
     private AccountType accountType;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "member_id")
     private Member member;
 

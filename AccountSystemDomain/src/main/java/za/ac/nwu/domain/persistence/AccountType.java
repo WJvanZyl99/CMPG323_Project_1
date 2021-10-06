@@ -1,4 +1,4 @@
-package za.ac.nwu.domain.persistance;
+package za.ac.nwu.domain.persistence;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -11,8 +11,7 @@ public class AccountType {
     public AccountType() {
     }
 
-    public AccountType(Integer id, String accountType, LocalDate creationDate) {
-        this.id = id;
+    public AccountType(String accountType, LocalDate creationDate) {
         this.accountType = accountType;
         this.creationDate = creationDate;
     }

@@ -1,4 +1,4 @@
-package za.ac.nwu.domain.persistance;
+package za.ac.nwu.domain.persistence;
 
 import javax.persistence.*;
 import java.util.Objects;

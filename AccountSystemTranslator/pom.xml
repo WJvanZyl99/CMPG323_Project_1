@@ -18,11 +18,13 @@
             <groupId>za.ac.nwu</groupId>
             <artifactId>AccountSystemRepo</artifactId>
             <version>${project.version}</version>
+            <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>za.ac.nwu</groupId>
             <artifactId>AccountSystemDomain</artifactId>
             <version>${project.version}</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 
