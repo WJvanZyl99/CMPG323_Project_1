@@ -14,8 +14,7 @@ public class AccountTransaction {
     public AccountTransaction() {
     }
 
-    public AccountTransaction(Integer id, AccountType accountType, Member member, Integer amount, LocalDate transactionDate) {
-        this.id = id;
+    public AccountTransaction(AccountType accountType, Member member, Integer amount, LocalDate transactionDate) {
         this.accountType = accountType;
         this.member = member;
         this.amount = amount;

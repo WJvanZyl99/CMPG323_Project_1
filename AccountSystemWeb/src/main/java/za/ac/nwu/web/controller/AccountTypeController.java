@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RestController;
 import za.ac.nwu.domain.persistence.AccountType;
 import za.ac.nwu.domain.service.GeneralResponse;
 import za.ac.nwu.logic.flow.FetchAccountTypeFlow;
-
 import java.util.List;
 
 @RestController
